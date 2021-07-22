@@ -10,3 +10,7 @@ functions:
     labels:
       com.openfaas.min.scale: 1
       com.openfaas.max.scale: 1
+    environment:
+      write_timeout: 5m30s
+      read_timeout: 5m30s
+      exec_timeout: 5m30s
