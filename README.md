@@ -19,6 +19,12 @@ arkade install openfaas \
   --set queueWorker.image=alexellis2/pro-queue-worker-demo:0.1.1
 ```
 
+Deploy the function in this repository:
+
+```bash
+faas-cli deploy -f chaos-fn.yml
+```
+
 ## Experiment 1
 
 Cause the API to start failing
