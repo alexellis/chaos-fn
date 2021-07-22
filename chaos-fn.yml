@@ -1,0 +1,12 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://127.0.0.1:8080
+functions:
+  chaos-fn:
+    lang: golang-middleware
+    handler: ./chaos-fn
+    image: alexellis2/chaos-fn:0.1.1
+    labels:
+      com.openfaas.min.scale: 1
+      com.openfaas.max.scale: 1
