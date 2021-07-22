@@ -8,7 +8,18 @@ A function for chaos testing with OpenFaaS
 * Test timeouts
 * Test certain lengths of HTTP request bodies
 
-## Experiment
+## Setup
+
+Install openfaas:
+
+```bash
+kind cluster create
+
+arkade install openfaas \
+  --set queueWorker.image=alexellis2/pro-queue-worker-demo:0.1.1
+```
+
+## Experiment 1
 
 Cause the API to start failing
 
@@ -50,7 +61,7 @@ curl -i localhost:8080/function/chaos-fn
 
 ```
 
-## Submit via async
+## Experiment 2 - the PRO async queue worker
 
 Set up a HTTP code that may be retried
 
