@@ -16,7 +16,7 @@ Install openfaas:
 kind cluster create
 
 arkade install openfaas \
-  --set queueWorker.image=alexellis2/pro-queue-worker-demo:0.1.1
+  --set queueWorker.image=alexellis2/pro-queue-worker-demo:0.2.0
 ```
 
 Deploy the function in this repository:
