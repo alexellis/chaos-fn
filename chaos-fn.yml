@@ -14,3 +14,7 @@ functions:
       write_timeout: 5m30s
       read_timeout: 5m30s
       exec_timeout: 5m30s
+configuration:
+  templates:
+    - name: golang-middleware
+      source: https://github.com/openfaas/golang-http-template
